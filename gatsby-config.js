@@ -1,35 +1,57 @@
 module.exports = {
   siteMetadata: {
-    title: "scrobbly-web",
+    title: 'Scrobbly website',
+    description: 'Official website for the Scrobbly mobile app.',
+    author: '@anhek',
+    siteUrl: 'https://scrobbly.netlify.app/',
   },
   plugins: [
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        icon: "src/images/icon.png",
+        fonts: [`Inter\:400,700`],
+        display: 'sans-serif',
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-emotion`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
       },
-      __key: "images",
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        // Accepts all options defined by `gatsby-plugin-postcss` plugin.
       },
-      __key: "pages",
+    },
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/icon.png',
+      },
+    },
+    'gatsby-plugin-mdx',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: './src/pages/',
+      },
+      __key: 'pages',
     },
   ],
 };
