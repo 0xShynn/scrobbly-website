@@ -6,6 +6,7 @@ import Layout from "../layouts/Layout";
 const StyledMain = tw.div`
     w-full
     p-8
+    flex
   `;
 
 const Text = tw.p`

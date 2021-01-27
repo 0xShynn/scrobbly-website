@@ -1,7 +1,7 @@
 /* eslint-disable quotes */
 module.exports = {
   siteMetadata: {
-    title: "Scrobbly website",
+    title: "Scrobbly",
     description: "Official website for the Scrobbly mobile app.",
     author: "@anhek",
     siteUrl: "https://scrobbly.netlify.app/",

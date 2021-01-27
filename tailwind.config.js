@@ -5,6 +5,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
 
   theme: {
+    screens: {
+      xs: "480px",
+      ...defaultTheme.screens,
+    },
     extend: {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],

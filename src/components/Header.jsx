@@ -6,10 +6,11 @@ const StyledHeader = tw.div`
     bg-gray-900
     flex
     p-4
+    flex flex-wrap justify-center xs:justify-start
   `;
 
 const StyledLink = styled(Link)`
-  ${tw`p-2 text-white bg-gray-500 rounded-lg`}
+  ${tw`p-2 text-white`}
 `;
 
 const Header = ({ siteTitle }) => {
