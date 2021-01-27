@@ -1,21 +1,22 @@
 import React from "react";
-import tw from "twin.macro";
+import { Link } from "gatsby";
+import tw, { styled } from "twin.macro";
 
-const Header = () => {
-  const HeaderComp = tw.div`
+const StyledHeader = tw.div`
     bg-gray-900
-  `;
-  const Title = tw.h1`
-    text-lg
-    text-white
+    flex
     p-4
-    font-sans
-    font-bold
   `;
+
+const StyledLink = styled(Link)`
+  ${tw`p-2 text-white bg-gray-500 rounded-lg`}
+`;
+
+const Header = ({ siteTitle }) => {
   return (
-    <HeaderComp>
-      <Title>Scrobbly</Title>
-    </HeaderComp>
+    <StyledHeader>
+      <StyledLink to="/">{siteTitle}</StyledLink>
+    </StyledHeader>
   );
 };
 
