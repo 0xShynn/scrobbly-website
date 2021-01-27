@@ -1,7 +1,7 @@
-import * as React from 'react';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Main from '../components/Main';
+import * as React from "react";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import Main from "../components/Main";
 
 const IndexPage = () => {
   return (

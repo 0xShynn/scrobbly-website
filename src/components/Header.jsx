@@ -1,8 +1,8 @@
-import React from 'react';
-import tw from 'twin.macro';
+import React from "react";
+import tw from "twin.macro";
 
 const Header = () => {
-  const Header = tw.div`
+  const HeaderComp = tw.div`
     bg-gray-900
   `;
   const Title = tw.h1`
@@ -13,9 +13,9 @@ const Header = () => {
     font-bold
   `;
   return (
-    <Header>
+    <HeaderComp>
       <Title>Scrobbly</Title>
-    </Header>
+    </HeaderComp>
   );
 };
 

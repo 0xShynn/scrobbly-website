@@ -1,13 +1,8 @@
-import React from 'react';
-import tw, { styled } from 'twin.macro';
-
-import background from '../../static/fabric_plaid@2x.png';
+import React from "react";
+import tw, { styled } from "twin.macro";
 
 const PageContainer = styled.div`
-  ${tw`
-        bg-gray-200 text-xl w-1/2
-    `}
-  background-image: url(${background});
+  ${tw`w-1/2 text-xl bg-gray-200`}
   padding: 10px;
 `;
 
