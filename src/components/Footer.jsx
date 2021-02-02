@@ -6,13 +6,15 @@ import { TiHeart } from "react-icons/ti";
 
 const StyledFooter = tw.footer`
   py-12
+  lg:py-20
   px-6
   bg-gray-100
 `;
 
 const StyledFooterText = tw.p`
     font-sans
-    text-sm
+    text-xs
+    sm:text-sm
     text-center
     text-gray-500
   `;

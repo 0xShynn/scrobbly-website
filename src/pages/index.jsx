@@ -27,6 +27,8 @@ const StyledPresentation = tw.header`
   md:pl-12
   md:max-w-lg
   lg:items-start
+  xl:max-w-2xl
+  xl:pr-32
 `;
 
 const StyledAppIcon = tw.div`
@@ -61,7 +63,7 @@ const StyledSubtitle = tw.h3`
   `;
 
 const StyledAppStoreLogo = tw.div`
-  w-36 sm:w-44
+  w-40 sm:w-44
 `;
 
 const StyledImage = tw.div`
@@ -110,7 +112,7 @@ const IndexPage = () => {
       />
       <StyledContainer>
         <StyledPresentation>
-          <Link to="/">
+          <Link to="/" title="Scrobbly">
             <StyledAppIcon>
               <ScrobblyLogo />
             </StyledAppIcon>
@@ -125,7 +127,7 @@ const IndexPage = () => {
           </StyledSubtitle>
           <StyledAppStoreLogo>
             <a
-              href="https://duckduckgo.com"
+              href="https://www.apple.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
