@@ -8,21 +8,16 @@ import SEO from "../components/Seo";
 import Layout from "../layouts/Layout";
 import ScrobblyLogo from "../components/ScrobblyLogo";
 
-const StyledAppIcon = tw.div`
-  w-16
-  md:w-20
-  mb-12
-`;
-
-const StyledContainer = tw.section`
+const StyledContainer = tw.div`
   flex
   flex-wrap
   justify-center
   lg:py-10
   xl:py-40
+  bg-white
 `;
 
-const StyledPresentation = tw.div`
+const StyledPresentation = tw.header`
   flex
   flex-col
   p-8
@@ -34,14 +29,10 @@ const StyledPresentation = tw.div`
   lg:items-start
 `;
 
-const StyledImage = tw.div`
-  w-96
-  mb-8
-  md:mb-0
-`;
-
-const StyledAppStoreLogo = tw.div`
-  w-36 sm:w-44
+const StyledAppIcon = tw.div`
+  w-16
+  md:w-20
+  mb-12
 `;
 
 const StyledAppName = tw.h1`
@@ -55,8 +46,8 @@ const StyledTitle = tw.h2`
   text-2xl
   text-primary
   text-center
-  md:text-left
   mb-3
+  lg:text-left
 `;
 
 const StyledSubtitle = tw.h3`
@@ -66,13 +57,32 @@ const StyledSubtitle = tw.h3`
     lg:mb-12
     text-center
     text-gray-600
-    md:text-left
+    lg:text-left
   `;
+
+const StyledAppStoreLogo = tw.div`
+  w-36 sm:w-44
+`;
+
+const StyledImage = tw.div`
+  w-96
+  mb-8
+  md:mb-0
+`;
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      fileName: file(relativePath: { eq: "scrobbly-on-iphone.png" }) {
+      scrobbly_home_screenshot: file(
+        relativePath: { eq: "scrobbly-screenshot.jpg" }
+      ) {
+        childImageSharp {
+          fixed {
+            src
+          }
+        }
+      }
+      iphone_mockup: file(relativePath: { eq: "scrobbly-on-iphone.png" }) {
         childImageSharp {
           fluid(maxWidth: 690) {
             ...GatsbyImageSharpFluid
@@ -84,7 +94,20 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO
+        title="Home"
+        keywords={[
+          `scrobbly`,
+          `lastfm`,
+          `ios app`,
+          `mobile application`,
+          `mobile app`,
+          `music application`,
+          `music app`,
+          `music data`,
+        ]}
+        image={data.scrobbly_home_screenshot.childImageSharp.fixed.src}
+      />
       <StyledContainer>
         <StyledPresentation>
           <Link to="/">
@@ -115,7 +138,10 @@ const IndexPage = () => {
         </StyledPresentation>
 
         <StyledImage>
-          <GatsbyImage fluid={data.fileName.childImageSharp.fluid} alt="" />
+          <GatsbyImage
+            fluid={data.iphone_mockup.childImageSharp.fluid}
+            alt=""
+          />
         </StyledImage>
       </StyledContainer>
     </Layout>

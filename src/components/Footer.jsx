@@ -4,15 +4,15 @@ import React from "react";
 import tw, { styled } from "twin.macro";
 import { TiHeart } from "react-icons/ti";
 
-const StyledFooter = tw.div`
+const StyledFooter = tw.footer`
   py-12
   px-6
   bg-gray-100
 `;
 
-const StyledFooterText = tw.h2`
+const StyledFooterText = tw.p`
     font-sans
-    text-xs
+    text-sm
     text-center
     text-gray-500
   `;
