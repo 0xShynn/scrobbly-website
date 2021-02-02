@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
 
 import tw from "twin.macro";
@@ -18,7 +18,8 @@ const StyledContainer = tw.section`
   flex
   flex-wrap
   justify-center
-  xl:py-20
+  lg:py-10
+  xl:py-40
 `;
 
 const StyledPresentation = tw.div`
@@ -35,6 +36,8 @@ const StyledPresentation = tw.div`
 
 const StyledImage = tw.div`
   w-96
+  mb-8
+  md:mb-0
 `;
 
 const StyledAppStoreLogo = tw.div`
@@ -44,6 +47,7 @@ const StyledAppStoreLogo = tw.div`
 const StyledAppName = tw.h1`
   text-xl
   mb-3
+  text-gray-600
 `;
 
 const StyledTitle = tw.h2`
@@ -52,21 +56,23 @@ const StyledTitle = tw.h2`
   text-primary
   text-center
   md:text-left
-  pb-3
+  mb-3
 `;
 
 const StyledSubtitle = tw.h3`
     font-sans
     text-base
     mb-6
+    lg:mb-12
     text-center
+    text-gray-600
     md:text-left
   `;
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      fileName: file(relativePath: { eq: "scrobbly-on-iphone.jpg" }) {
+      fileName: file(relativePath: { eq: "scrobbly-on-iphone.png" }) {
         childImageSharp {
           fluid(maxWidth: 690) {
             ...GatsbyImageSharpFluid
@@ -81,9 +87,11 @@ const IndexPage = () => {
       <SEO title="Home" />
       <StyledContainer>
         <StyledPresentation>
-          <StyledAppIcon>
-            <ScrobblyLogo />
-          </StyledAppIcon>
+          <Link to="/">
+            <StyledAppIcon>
+              <ScrobblyLogo />
+            </StyledAppIcon>
+          </Link>
           <StyledAppName>Scrobbly</StyledAppName>
           <StyledTitle>
             A clean and elegant iOS mobile app to display your music data
