@@ -15,6 +15,6 @@ a {
   @apply text-primary;
 }
 
-a:hover {
+/* a:hover {
   @apply underline;
-}
+} */

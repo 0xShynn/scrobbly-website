@@ -25,10 +25,16 @@ const NavLink = styled.nav`
 
 const StyledLink = styled(Link)`
   ${tw`text-primary`}
+  :hover {
+    ${tw`underline`}
+  }
 `;
 
-const StyledFooterLink = tw.a`
-  text-gray-500
+const StyledFooterLink = styled.a`
+  ${tw`text-gray-500`}
+  :hover {
+    ${tw`underline`}
+  }
 `;
 
 const Heart = styled(TiHeart)`
@@ -39,9 +45,9 @@ const Footer = () => {
   return (
     <StyledFooter>
       <NavLink>
-        <StyledLink to="/">FAQ</StyledLink> •{" "}
-        <StyledLink to="/">Privacy Policy</StyledLink> •{" "}
-        <StyledLink to="/">Contact Us</StyledLink>
+        <StyledLink to="/faq">FAQ</StyledLink> •{" "}
+        <StyledLink to="/privacy-policy">Privacy Policy</StyledLink> •{" "}
+        <a href="mailto:a.nhek@icloud.com">Contact Us</a>
       </NavLink>
       <StyledFooterText>
         Copyright © {new Date().getFullYear()} Scrobbly. Made with <Heart /> by{" "}
