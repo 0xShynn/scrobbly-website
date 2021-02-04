@@ -1,18 +1,14 @@
 import * as React from "react";
-import tw from "twin.macro";
 import SEO from "../components/Seo";
-import Layout from "../layouts/Layout";
+import LayoutPage from "../layouts/LayoutPage";
 
 function Faq() {
-  const Title = tw.h1`
-    text-2xl
-  `;
   return (
-    <Layout>
+    <LayoutPage>
       <SEO title="FAQ" />
-      <Title>Frequently Asked Questions</Title>
+      <h1>Frequently Asked Questions</h1>
       <p>Lorem</p>
-    </Layout>
+    </LayoutPage>
   );
 }
 

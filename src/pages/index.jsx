@@ -1,11 +1,11 @@
 import * as React from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery, Img } from "gatsby";
 import GatsbyImage from "gatsby-image";
-
 import tw from "twin.macro";
-import AppStoreButton from "../components/AppStoreButton";
-import SEO from "../components/Seo";
+
 import Layout from "../layouts/Layout";
+import SEO from "../components/Seo";
+import AppStoreButton from "../components/AppStoreButton";
 import ScrobblyLogo from "../components/ScrobblyLogo";
 
 const StyledContainer = tw.div`
@@ -27,7 +27,7 @@ const StyledPresentation = tw.header`
   md:pl-12
   md:max-w-lg
   lg:items-start
-  xl:max-w-2xl
+  xl:max-w-3xl
   xl:pr-32
 `;
 
@@ -39,31 +39,36 @@ const StyledAppIcon = tw.div`
 
 const StyledAppName = tw.h1`
   text-xl
-  mb-3
   text-gray-600
+  mb-3
+  xl:text-2xl
+  xl:mb-6
 `;
 
 const StyledTitle = tw.h2`
   font-bold
-  text-2xl
   text-primary
   text-center
   mb-3
   lg:text-left
+  lg:text-2xl
+  xl:text-3xl
+  xl:mb-6
 `;
 
 const StyledSubtitle = tw.h3`
-    font-sans
-    text-base
-    mb-6
-    lg:mb-12
-    text-center
-    text-gray-600
-    lg:text-left
-  `;
+  font-sans
+  text-base
+  mb-6
+  text-center
+  text-gray-600
+  lg:text-left
+  lg:mb-10
+  xl:text-xl
+`;
 
 const StyledAppStoreLogo = tw.div`
-  w-40 sm:w-44
+  w-40 md:w-44
 `;
 
 const StyledImage = tw.div`
@@ -84,9 +89,9 @@ const IndexPage = () => {
           }
         }
       }
-      iphone_mockup: file(relativePath: { eq: "scrobbly-on-iphone.png" }) {
+      iphone_mockup: file(relativePath: { eq: "scrobbly-on-iphone.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 690) {
+          fluid(maxWidth: 700) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -142,7 +147,7 @@ const IndexPage = () => {
         <StyledImage>
           <GatsbyImage
             fluid={data.iphone_mockup.childImageSharp.fluid}
-            alt=""
+            alt="Scrobbly app on iPhone"
           />
         </StyledImage>
       </StyledContainer>

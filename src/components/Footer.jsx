@@ -11,16 +11,8 @@ const StyledFooter = tw.footer`
   bg-gray-100
 `;
 
-const StyledFooterText = tw.p`
-    font-sans
-    text-xs
-    sm:text-sm
-    text-center
-    text-gray-500
-  `;
-
 const NavLink = styled.nav`
-  ${tw`mb-4 text-lg text-center text-gray-400 sm:text-xl`}
+  ${tw`mb-4 text-lg text-center text-gray-400 sm:text-xl xl:text-2xl`}
 `;
 
 const StyledLink = styled(Link)`
@@ -35,6 +27,15 @@ const StyledFooterLink = styled.a`
   :hover {
     ${tw`underline`}
   }
+`;
+
+const StyledFooterText = tw.p`
+  font-sans
+  text-xs
+  sm:text-sm
+  text-center
+  text-gray-500
+  xl:text-base
 `;
 
 const Heart = styled(TiHeart)`
