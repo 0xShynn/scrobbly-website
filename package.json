@@ -45,6 +45,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
+    "react-obfuscate": "^3.6.8",
     "styled-components": "^5.2.1",
     "stylelint": "^13.9.0",
     "tailwindcss": "^2.0.2",

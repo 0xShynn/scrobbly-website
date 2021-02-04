@@ -14,12 +14,12 @@ body {
 
 a {
   transition: all 0.3s;
-  @apply text-primary;
+  @apply text-blue;
 }
 
-/* a:hover {
+a:hover {
   @apply underline;
-} */
+}
 
 h1,
 h2,

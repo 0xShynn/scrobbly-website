@@ -1,5 +1,6 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import * as React from "react";
-import { graphql, Link, useStaticQuery, Img } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
 import tw from "twin.macro";
 
@@ -68,7 +69,7 @@ const StyledSubtitle = tw.h3`
 `;
 
 const StyledAppStoreLogo = tw.div`
-  w-40 md:w-44
+  w-44
 `;
 
 const StyledImage = tw.div`
@@ -124,11 +125,12 @@ const IndexPage = () => {
           </Link>
           <StyledAppName>Scrobbly</StyledAppName>
           <StyledTitle>
-            A clean and elegant iOS mobile app to display your music data
+            A clean and elegant iOS mobile app to display your Last.fm music
+            data
           </StyledTitle>
           <StyledSubtitle>
-            Keep track of your favorite artists, songs, albums and scrobbles
-            from your Last.fm account.
+            Keep track of your top favorite artists, songs, albums and scrobbles
+            of your Last.fm account.
           </StyledSubtitle>
           <StyledAppStoreLogo>
             <a
