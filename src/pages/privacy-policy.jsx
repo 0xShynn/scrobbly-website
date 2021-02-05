@@ -1,26 +1,11 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from "react";
-import tw from "twin.macro";
+import Obfuscate from "react-obfuscate";
 
 import LayoutPage from "../layouts/LayoutPage";
 import SEO from "../components/Seo";
 
 const PrivacyPolicy = () => {
-  const StyledSection = tw.section`
-    mb-8
-  `;
-
-  const StyledUl = tw.ul`
-    p-4
-  `;
-
-  const StyleLi = tw.li`
-    list-disc
-    text-gray-700
-    text-sm
-    md:text-base
-  `;
-
   return (
     <LayoutPage>
       <SEO
@@ -28,7 +13,7 @@ const PrivacyPolicy = () => {
         description="Privacy policy for the Scrobbly iOS mobile application."
       />
       <h1>Privacy Policy</h1>
-      <StyledSection>
+      <section>
         <p>
           Antonin Nhek built the Scrobbly app as a Free app. This SERVICE is
           provided by Antonin Nhek at no cost and is intended for use as is.
@@ -50,8 +35,8 @@ const PrivacyPolicy = () => {
           Terms and Conditions, which is accessible at Scrobbly unless otherwise
           defined in this Privacy Policy.
         </p>
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>Information Collection and Use</h2>
         <p>
           For a better experience, while using our Service, I may require you to
@@ -59,47 +44,45 @@ const PrivacyPolicy = () => {
           but not limited to username. The information that I request will be
           retained on your device and is not collected by me in any way.
         </p>
-        <div>
-          <p>
-            The app does use third party services that may collect information
-            used to identify you.
-          </p>
-          <p>
-            Link to privacy policy of third party service providers used by the
-            app
-          </p>
-          <StyledUl>
-            <StyleLi>
-              <a
-                href="https://www.last.fm/legal/terms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Last.fm
-              </a>
-            </StyleLi>
-            <StyleLi>
-              <a
-                href="https://expo.io/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Expo
-              </a>
-            </StyleLi>
-            <StyleLi>
-              <a
-                href="https://www.spotify.com/legal/privacy-policy/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Spotify
-              </a>
-            </StyleLi>
-          </StyledUl>
-        </div>
-      </StyledSection>
-      <StyledSection>
+        <p>
+          The app does use third party services that may collect information
+          used to identify you.
+        </p>
+        <p>
+          Links to privacy policy of third party service providers used by the
+          app :
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://www.last.fm/legal/terms"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Last.fm
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://expo.io/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Expo
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.spotify.com/legal/privacy-policy/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Spotify
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
         <h2>Log Data</h2>
         <p>
           I want to inform you that whenever you use my Service, in a case of an
@@ -110,8 +93,8 @@ const PrivacyPolicy = () => {
           when utilizing my Service, the time and date of your use of the
           Service, and other statistics.
         </p>{" "}
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>Cookies</h2>
         <p>
           Cookies are files with a small amount of data that are commonly used
@@ -127,27 +110,27 @@ const PrivacyPolicy = () => {
           your device. If you choose to refuse our cookies, you may not be able
           to use some portions of this Service.
         </p>{" "}
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>Service Providers</h2>
         <p>
           I may employ third-party companies and individuals due to the
           following reasons:
         </p>{" "}
-        <StyledUl>
-          <StyleLi>To facilitate our Service;</StyleLi>{" "}
-          <StyleLi>To provide the Service on our behalf;</StyleLi>{" "}
-          <StyleLi>To perform Service-related services; or</StyleLi>{" "}
-          <StyleLi>To assist us in analyzing how our Service is used.</StyleLi>
-        </StyledUl>{" "}
+        <ul>
+          <li>To facilitate our Service;</li>{" "}
+          <li>To provide the Service on our behalf;</li>{" "}
+          <li>To perform Service-related services; or</li>{" "}
+          <li>To assist us in analyzing how our Service is used.</li>
+        </ul>{" "}
         <p>
           I want to inform users of this Service that these third parties have
           access to your Personal Information. The reason is to perform the
           tasks assigned to them on our behalf. However, they are obligated not
           to disclose or use the information for any other purpose.
         </p>{" "}
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>Security</h2>
         <p>
           I value your trust in providing us your Personal Information, thus we
@@ -156,8 +139,8 @@ const PrivacyPolicy = () => {
           method of electronic storage is 100% secure and reliable, and I cannot
           guarantee its absolute security.
         </p>{" "}
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>Links to Other Sites</h2>
         <p>
           This Service may contain links to other sites. If you click on a
@@ -167,8 +150,8 @@ const PrivacyPolicy = () => {
           over and assume no responsibility for the content, privacy policies,
           or practices of any third-party sites or services.
         </p>{" "}
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>Children’s Privacy</h2>
         <p>
           These Services do not address anyone under the age of 13. I do not
@@ -179,8 +162,8 @@ const PrivacyPolicy = () => {
           provided us with personal information, please contact me so that I
           will be able to do necessary actions.
         </p>
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>Changes to This Privacy Policy</h2>
         <p>
           I may update our Privacy Policy from time to time. Thus, you are
@@ -189,13 +172,19 @@ const PrivacyPolicy = () => {
           page.
         </p>{" "}
         <p>This policy is effective as of 2021-02-03</p>{" "}
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>Contact Us</h2>
         <p>
           If you have any questions or suggestions about my Privacy Policy, do
           not hesitate to contact me at{" "}
-          <a href="mailto:a.nhek@icloud.com">a.nhek@icloud.com</a>.
+          <Obfuscate
+            email="scrobbly.app@gmail.com"
+            headers={{
+              subject: "About Scrobbly: ",
+            }}
+          />
+          .
         </p>{" "}
         <p>
           This privacy policy page was created at{" "}
@@ -215,7 +204,7 @@ const PrivacyPolicy = () => {
             App Privacy Policy Generator
           </a>
         </p>
-      </StyledSection>
+      </section>
     </LayoutPage>
   );
 };

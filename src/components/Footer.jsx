@@ -14,7 +14,7 @@ const StyledFooter = tw.footer`
 `;
 
 const NavLink = styled.nav`
-  ${tw`mb-4 text-lg text-center text-gray-400 md:text-xl xl:text-2xl`}
+  ${tw`mb-4 text-base text-center text-gray-400 md:text-lg xl:text-xl`}
   a {
     ${tw`text-primary`}
   }
@@ -46,6 +46,7 @@ const Footer = () => {
       <NavLink>
         <StyledLink to="/faq">FAQ</StyledLink> •{" "}
         <StyledLink to="/privacy-policy">Privacy Policy</StyledLink> •{" "}
+        <StyledLink to="/terms-and-conditions">Terms & Conditions</StyledLink> •{" "}
         <Obfuscate email="scrobbly.app@gmail.com">Contact Us</Obfuscate>
       </NavLink>
       <StyledFooterText>

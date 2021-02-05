@@ -7,23 +7,13 @@ import SEO from "../components/Seo";
 import LayoutPage from "../layouts/LayoutPage";
 
 function Faq() {
-  const StyledSection = tw.section`
-    mb-8
-  `;
-
-  const StyledHeader = tw.header`
-    mb-8
-  `;
-
   const StyledLink = tw.a`text-blue hover:underline`;
 
   return (
     <LayoutPage>
       <SEO title="FAQ" />
-      <StyledHeader>
-        <h1>Frequently Asked Questions</h1>
-      </StyledHeader>
-      <StyledSection>
+      <h1>Frequently Asked Questions</h1>
+      <section>
         <h2>What is Last.fm ?</h2>
         <p>
           <StyledLink
@@ -48,8 +38,8 @@ function Faq() {
         <StyledLink href="https://en.wikipedia.org/wiki/Last.fm">
           Source: Wikipedia
         </StyledLink>
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>What is Scrobbly ?</h2>
         <p>
           Scrobbly is a iOS application based on the Last.fm API. The main goal
@@ -57,8 +47,8 @@ function Faq() {
           favorite artists, tracks, albums and scrobbles inside a clean and
           simple mobile app.
         </p>
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>How to create an account ? </h2>
         <p>
           In order to work, you need to have a{" "}
@@ -81,8 +71,8 @@ function Faq() {
           your account, you will be able to use your login details inside the
           Scrobbly app.
         </p>
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>My Last.fm account is created, what&apos;s next ?</h2>
         <p>
           Depending on the platforms or the applications you are using to listen
@@ -97,18 +87,18 @@ function Faq() {
           </StyledLink>{" "}
           to navigate to the page related to this topic on Last.fm website.
         </p>
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>Does Scrobbly works offline ?</h2>
         <p>The app doesn&apos;t have offline functionnalites at this time.</p>
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>
           Will Scrobbly be able to scrobbles music directly from the app ?
         </h2>
         <p>For the moment, this feature is not planned.</p>
-      </StyledSection>
-      <StyledSection>
+      </section>
+      <section>
         <h2>Do you have a request or a suggestion ?</h2>
         <p>Feel free to contact me at :</p>
         <Obfuscate
@@ -117,7 +107,7 @@ function Faq() {
             subject: "About Scrobbly: ",
           }}
         />
-      </StyledSection>
+      </section>
     </LayoutPage>
   );
 }

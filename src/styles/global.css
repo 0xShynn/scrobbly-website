@@ -41,3 +41,21 @@ h2  {
 p {
   @apply text-gray-600 text-sm md:text-base;
 }
+
+/* STRUCTURE */
+
+section {
+  @apply mb-8;
+}
+
+p {
+  @apply mb-3;
+}
+
+ul {
+  @apply pb-4 px-4;
+}
+
+li {
+  @apply list-disc text-gray-700 text-sm md:text-base;
+}
