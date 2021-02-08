@@ -55,11 +55,11 @@ const PrivacyPolicy = () => {
         <ul>
           <li>
             <a
-              href="https://www.last.fm/legal/terms"
+              href="https://privacy.cbs/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Last.fm
+              Last.fm (CBS Interactive)
             </a>
           </li>
           <li>
