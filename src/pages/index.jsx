@@ -134,7 +134,7 @@ const IndexPage = () => {
           </StyledSubtitle>
           <StyledAppStoreLogo>
             <a
-              href="https://www.apple.com/"
+              href="https://apple.co/3aXVH2S"
               target="_blank"
               rel="noopener noreferrer"
             >
